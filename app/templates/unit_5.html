@@ -1,0 +1,102 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    </style>   
+    </head>
+{% extends "base.html" %}
+
+{% block content %}
+        <h1>Unit 5: Using Objects</h1>
+        <div class = "part1">
+            <h3>Void Methods</h3>
+            <h4>What are void methods?</h4>
+            <body>These methods do not have return statement. Void methods are usually formatted like: <code>public static void doStuff() {//code}</code>. The <b>Public</b> indicates that other classes can access the method. The <b>Void</b> indicates that the method doesn’t return anything. The Void can be replace by int, double, boolean, and string to show what data type is getting returned
+                 Public methods must be declare OUTSIDE of the main method</body>
+        </div>
+        <div class = "part2">
+            <h3>Parameters</h3>
+            <h4>What are parameters?</h4>
+            <body>Parameters are inputs for methods. There are two kind of parameters: formal and actual. </body>
+            
+            <h4>What is formal parameter?</h4>
+            <body>A formal parameter is a local variable in a method header that holds the data sent in. The data type of the parameter makes a huge difference in what the method can do. Formal parameters are declared in the parentheses after the method’s name and need to have their own names. <br> Formal Parameter Rules:</body>
+            <ul>
+                <li>As many as you need</li>
+                <li>Any combination of data types</li>
+                <li>Values are sent in from main (or the method calling the method)</li>
+                <li>The values being sent in are called arguments (or actual parameters)</li>
+            </ul>
+            
+            <h4>What is actual parameters</h4>
+            <body>An actual parameter(a.k.a argument) is the data sent to a method.The data type of the argument MUST match the data type of the formal parameter.</body>
+            
+            <h4>What's the difference between actual and formal parameters?</h4>
+            <body> Formal parameter is the name of a value inside a method. An actual parameter or argument is the name of the value on the outside of the method. REMEMBER THAT ORDER AND DATA TYPE OF ACTUAL AND FORMAL PARAMETERS MUST MATCH</body>
+            
+            <h4> What the different between  Primitive and. Class parameters?</h4>
+            <body>Because primitives are stored in memory directly, if they are changed in a void method, those changes are <b><i>not preserved while </i></b> while because class data types are stored as references, if they are changed in a void method those changes <b><i>are preserved ecept for Strings since strings are immutable</i></b>.</body>
+        </div>
+        <div class = "part3">
+            <h3>Return Methods</h3>
+            <h4> What are return methods?</h4>
+            <body>Methods with return statements which sends a value back to the calling method, and thus provide output which can be stored as a variable. A METHOD CAN ONLY HAVE <b> ONE</b>RETURN VALUE. Once java encounters the return statement, Java ignores anything further after the return statement. To catch the info for the return value, we can store it in a variable, print it, or use it in a boolean statement. If your return a value inside a loop, it ends the loop. You cannot overload a methods with more than one return statements.</body>
+        </div>
+        
+        <div class = "part4">
+            <h3>To make classes from scratch</h3>
+            <body>Classes are really useful for representing things with multiple data attached to them. When we create a new class, keep in mind:
+            <ul>
+                <li>The class name is capitalized</li>
+                <li>The class should go in its own file in the same directory as the rest of our files for a given project</li>
+                <li>The file name should match the class name exactly, followed by a .java extension</li>
+            </ul>
+            We will create a new class by creating a new file and declare our class as public. To run any java file, we need the static void main method presented. Since we want to keep each class we make separate in a new file, we usually create a runner file that has this main method in it. Then we can instantiate the new object which is  when we create a new space in memory to hold a reference to a class. After we can start saving data by declaring the variable for each attribute. Make these variables private so other code in other classes can not change their values. If we do want to access private variables, we need to write accessor method which absically return the private variable. If we want other files to change the private variables, we need to write a mutator method which is a void method with a parameter passed in which defines the behavior of updating an instance variable.The next part are constructors.
+            </body>
+            
+            <h4>Contsructor</h4>
+            <body> To create an object we need a Constructor. If you do not have one, Java adds a default one for us with no parameters. Our Construstors are declared public. Arguments are passed to constructors using call-by-value which copies of all the arguments that are made and these are what are used in the constructor.</body>
+            
+            <h4><code>.toString()</code> Method</h4>
+            <body>Lastly, we shoudl built a toString()</code> method. The toString()</code> method tells Java how to represent objects of a class as strings. It is always public, and always returns a String. </body>
+        </div>
+        <div class = "part5">
+            <h3>Building on after the Basics</h3>
+            
+            <h4>More info on constructor</h4>
+            <body>
+                <ul>
+                    <li>We can use mutator methods in our constructor.</li>
+                    <li>we can overload our constructors</li>
+                    <li><i>this</i> keyword to have our default constructor actually call our most detailed constructor and populate it with basic info we desire. This keyword allows one method to call another within its class</li>
+                    <li>By changing the number of arguments a method has, or changing its signature, Java knows which constructor to use in which situation, and you can chain them together using overloading. </li>
+                    <li>Every class in Java has to have a constructor so that instances of that class can be created. If we do not add a constructor to our class, Java adds one for us which is the default constructor. This constructor has no parameters and sets all the member variables to default values. This means all class data types are set to null, ints are set to 0, doubles to 0.0, and booleans to false.</li>
+                </ul>
+            </body>
+            
+            <h3> Static modifers</h3>
+            <h4>What are Static modifers?</h4>
+            <body>When the static modifier is added to a variable or method, it means that only one copy exists for all objects of that class. This means that all objects of this class share access to the static entity. Steps to coding Static modifers:
+            <ol>
+                <li>create the static variable and add another non-static variable which will be an <i>instance</i>variable</li>
+                <li>need to add code to our constructor to change the static variable and set the instance variable equal to the static variable</li>
+                <li>in your <code>.toString</code> method, return the value of the static variable by using the instance variable</li>
+            </ol>
+            Static modifers can be used an a counter or constant like <code>Integer.MAX_VALUE</code>.
+            </body>
+            
+            
+        </div>
+{% endblock %}
+</html>

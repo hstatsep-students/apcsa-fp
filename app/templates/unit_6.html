@@ -1,0 +1,142 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    </style>   
+    </head>
+{% extends "base.html" %}
+
+{% block content %}
+        <h1>Unit 6: Array</h1>
+        <h3> One Dimensional Arrays</h3>
+        
+        <div  class ="part1">
+        <h4>What are arrays?</h4>
+        <body>Arrays are used to store large amounts of information without needing to set up separate variables for each piece of information. Arrays are objects and can hold any kind of data, including primitive types like ints, other class data types like Strings, or even more arrays. To declare and initialize array, use <code>datatype[] name = new datatype [//num of space you want memory to allocate]</code>. To change the elements inside arrays, use  <code> nameofarr[//index of the element you want to chnage]</code> Like Strings, arrays have indexes which start from 0 to end at number of elements -1<br>
+        <table>
+            <tr>
+                <td>Elements</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Indexes</td>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>                
+            </tr>
+        </table>
+        Using an index value outside of this range will result in an <i>ArrayIndexOutOfBoundsException</i>. After creating the array, we CANNOT CHANGE THE AMOUNT OF INDEXES. Arrays can hold class data type like how they store primitive types. To call methods on object in arrays we can just access element from the array using <code>name[//index].method()</code>.
+        </body>
+        
+        <h4>How to search through an array?</h4>
+        <body> We can search through the array using a algorithm call linear search. There are two wwyas linear search can be used
+        <ul>
+            <li>to find the location of an element. Below are the steps:
+                <ol>
+                    <li>create a  flag variable which will be use to indicate the index of the element we want to find.</li>
+                    <li>loop through the whole array using for loop. the header of the for loop should look like: <code>for (int i = 0; i < arr.length; i++)
+                    {//code}</code></li>
+                    <li> then we will create an if statement inside the loop to see if the element is the one we are looking for.</li>
+                    <li> if the condition is true, set the flag varaible to i and if the condition is not true, the flag variable is -1 which means that that element is not in the array. </li>
+                </ol>
+            </li>
+            <li>how many time a certain element has appear on on the array. The steps are below:
+            <ol>
+                <li>create a counter int variable which is set to 0</li>
+                <li>loop through the whole array using for loop. the header of the for loop should look like: <code>for (int i = 0; i < arr.length; i++)</code></li>
+                <li> then we will create an if statement inside the loop to see if the element is the one we are looking for.</li>
+                <li>if the condition is met, then the counter will increase by one </li>
+            </ol>
+            </li>
+            <li>check if Every Element Meets a Condition. The steps are below:
+            <ol>
+                <li>create a boolean variable which is set to true.</li>
+                <li>loop through the whole array using for loop. the header of the for loop should look like: <code>for (int i = 0; i < arr.length; i++)</code></li>
+                <li> then we will create an if statement inside the loop to see if the element  meet the condition.</li>
+                <li> if the condition is not meet, the program will go inside the if condition and return false. while is the condition is meet then the code will skip over the code inside the loop. </li>
+                <li> return the boolean variable</li>
+            </ol>
+            </li>
+        </ul>
+        </body>
+        
+        <h4> What are other ways arrays use Algorithms ?</h4>
+        <body> Ways Algorithms are used in arrays:
+        <ul>
+            <li>insertion: when we insert we need to move or shift other elements to make space for new so we shift using an loop For example,if we want to insert something in index 3:<br>
+            <code>
+                for (int i = list.length - 1; <b>i > 3</b>; i--){  <br>                 
+                list[i] = list[i - 1]; }<br>
+            </code>
+            NOTE: the last element in the initial array will be removed 
+            </li>
+            <li>deletion: when we delete we want to remove a value so we need to shift elements. For example,  remove an item on index 2:<br>
+            <code>
+              for (int <b>i = 2</b>; i < list.length - 1; i++){<br>
+                  list[i] = list[i + 1];}<br>
+            </code>
+            </li>
+            <li>shifting elements
+            <ol>
+                <li>To shift every element one place left:<br> 
+                <code>int temp = list[0]; <br>
+                for (int i = 0; i < list.length - 1; i++){ <br>
+                    list[i] = list[i + 1];}          <br>         
+                    list[list.length - 1] = temp;<br>
+                </code>
+                </li>
+                
+                <li>To shift every element to right :<br>
+                <code>int temp = list[list.length - 1];<br>
+                for(int i = list.length -1; i > 0; i--){  <br>
+                list[i] = list[i - 1];}                <br>
+                list[0] = temp;<br>
+                </code>
+                </li>
+            </ol>
+            </li>
+            <li> reversing elements: when reversing an element, we are swapping the element from the start of the list with the end using a dummy variable to enable the swap. We stop halfway or else it would swap everything back to original position<br>
+            <code>
+                for (int i = 0; i < list.length / 2; i++){  <br>
+                int j = list.length - i - 1; //index of element in end half     <br>                                                                
+                int temp = list[i];            <br>
+                list[i] = list[j];            <br>
+                list[j] = temp;}<br>
+            </code>
+            </li>
+        </ul>
+        </body>
+        
+        <h3>For-each Loops</h3>
+        <h4> What is the for-each loop?</h4>
+        <body>This is an enhanced for loop where we do not have to declare a new int and comparing it to the length of an array in ofer to traverse The format of this string: <code>for (type e : array){//code}</code> This code basically translates tha for each item <code>e</code> of datatype <code>type</code> in <code>array</code>, perform some action. The e is the enhanced for loop variable </body>
+        
+        <h4> What the difference between for loops and for-each loops?</h4>
+        <body>A for loop says “do something a certain num of time” while the for-each loop says “do this with every item in the list” which makes it easy to avoid off-by-one errors with the indexes.</body>
+        
+        <h4> What are the limitation of for-each loops?</h4><ul>
+            <li>cannot change the contents of the array when it is run</li>
+            <li>it does not allow us to access the index of the element it is currently accessing, perform operations on more than one element of the array, or traverse more than one array simultaneously. This means that any algorithms that compares or shift values cannot be used</li>
+        </ul>
+        </div>
+{% endblock %}
+</html>

@@ -1,0 +1,123 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    </style>   
+    </head>
+
+{% extends "base.html" %}
+
+{% block content %}
+        <h1>Unit 4:Iteration </h1>
+        
+        <div class = "part1">
+            <h3> Loops: Repeat commands.</h3>
+            <h4>How do while loops work?</h4>
+            <body>While loops have two components: the condition, and the code to execute if the condition is true, just like if statements. The difference is that a while loop will keep executing the code over and over as long as the condition is true:<br>
+            <code>
+                while (//condition) {<br>
+                  //commands that will gets repeat <br>
+                }<br>
+            </code>
+            While loops will only start if the condition is true to begin with and will only be stopped when the coniditon is FALSE. Be aware that the variables made inside a loop or if statements is only limited inside. 
+            </body>
+            
+            <h4>How do for loops work?</h4>
+            <body>For loops works with counting the numbers of repeats The for loops contains a <i>loop control variable</i>, which functions as the counting variable and controls the loop, is central to the function of a for loop. <br>
+            <code>
+                for (int i = 0; i < 10; i++) <br>
+                {
+                   //commands that will gets repeat <br>
+                }<br>
+            </code>
+            The header of the for loop:
+            <ul>
+                <li>i = 0:  initializes the loop. It runs once on the first iteration of the loop to set the starting value for the loop control variable.</li>
+                <li> i < 10:  tells the loop when to stop. This boolean statement is checked before every iteration of the loop after the increment/initialization statement is run. The loop exits when it is false.</li>
+                <li>i++: tells the loop what to count by. More specifically it increments or changes the loop control variable in a set way. After the loop has finished running, the control variable is incremented in preparation for the next iteration of the loop.</li>
+            </ul>
+            
+            
+            </body>
+            
+            <h4>So when should use the while loop or the for loop?</h4>
+            <body>We used for loops when we have a definite starting and stopping point, or when we know exactly how many times we want to repeat something. We used while loops when we do not know how many times the commands will get repeated. </body>
+           
+            <h4>What about nested loops?</h4>
+            <body>
+                Nested loops are basically loops inside a loop. The scope of the loop control variable for the outer loop is everything within that loop, including inside the inner loop. This means we can reference both of our control variables from inside the inner loop, and use the outer loop control variable in the header for our inner loop. Use a trace table to keep track.
+                
+                <body><b>What are trace tables?</b><br> A table to keep track of the code by pretending you’re the compiler and writing down what the code would do.<body>
+            </body>
+        </div>
+        
+        <div class = "part2">
+            <h3>Algorithms using loops</h3>
+            
+            <h4>What are algorithms?</h4>
+            <body>Algorithms are patterns or instructions used in programming. Algorithms must have operations that can be done by a computer, produce a result, and stop in a finite amount of time. </body>
+            
+            <h4>How can while loops be used in algorithms? </h4>
+            <body>While loop in algorithms can be used to loop but are not limited to:
+            <ul>
+                <li>Finding Individual Digits of a Number
+                <ul>
+                    <li>EX:<br>
+                    <code>
+                        while (num > 0){<br>
+                          int digit = num % 10;<br>
+                          System.out.println(digit);<br>
+                          num /= 10;<br>
+                        }<br>
+                    </code>
+                    </li>
+                </ul>
+                </li>
+                
+                <li>Finding Minimum or Maximum by  creating the variable and setting it to a value we know will be lower than any of the other values
+                <ul>
+                    <li>EX:<br>
+                    <code>
+                        int max = Integer.MIN_VALUE;<br>
+                        int num = 0; <br><br>
+
+                        while (num != -1){<br>
+                          System.out.println("enter a positive int, or -1 to stop");<br>
+                          num = scan.nextInt();<br>
+                          if (num > max)  {<br>
+                            max = num;<br>
+                          }<br>
+                        }<br>
+                        System.out.println("the max entered is: " + max);<br>
+                    </code>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            </body>
+            
+            <h4>How can for loops be used in algorithms specfically for Strings? </h4>
+            <body>
+                Loops are be used but are not limited to:
+                <ul>
+                    <li>Traversing A String: iterating through the characters of a String</li>
+                    <li>Counting Substrings<br> EX: number of times when a character (or characters) show up</li>
+                    <li>Concatenating Strings in a Loop: modify how a string is print out by adjusting the loop header</li>
+                    <li>Removing substrings in a Loop by creating a string and adding substrings that do not match the conditions </li>
+                </ul>
+            </body>
+        </div>
+{% endblock %}
+
+</html>
