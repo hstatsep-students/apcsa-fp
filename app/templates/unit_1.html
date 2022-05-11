@@ -2,144 +2,154 @@
     <head>
         <link rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-
-    </style>   
+        
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+    
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style>   
     </head>
 
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>Unit 1: Primitive Types </h1>
-        <div class = "part1">
-            <h3> Input and output in Java</h3>
+    <h1>Unit 1: Primitive Types </h1>
+    <div class = "part1">
+        <h3> Input and output in Java</h3>
             
-            <h4>What is Input?</h4>
-            <body>Input is pulling information into the computer. This works IF you have a spot in memory to hold this value a.k.a variable.</body>
+        <h4>What is Input?</h4>
+        <body>Input is pulling information into the computer. This works IF you have a spot in memory to hold this value a.k.a variable.</body>
             
-            <h4>How do we input in Java program?</h4>
-            <body>We use scanners. Scanners allow us to take user input and incorporate it in our program. Scanner are formatted like: <code>Scanner scan = new Scanner(System.in);</code> and when a scanner take user input, it usually read as a string and stores as a variable</body>
+        <h4>How do we input in Java program?</h4>
+        <body>We use scanners. Scanners allow us to take user input and incorporate it in our program. Scanner are formatted like: <code>Scanner scan = new Scanner(System.in);</code> and when a scanner take user input, it usually read as a string and stores as a variable</body>
             
-            <h4>What are variables?</h4>
-            <body>Variables are like containers in memory. When we declare a variable, we tell the computer to allocate some space in memory for something. We tell it what the name of the thing will be so it knows how to find it later, and what the type of the thing will be, so it knows how much space to set aside</body>
-            <body>Variables can be change. When we put value in the variable, we initialize the variable (before you can put the variable in a string, you must initialize it). It can be change to a different value later using an assignment operator (=). </body>
+        <h4>What are variables?</h4>
+        <body>Variables are like containers in memory. When we declare a variable, we tell the computer to allocate some space in memory for something. We tell it what the name of the thing will be so it knows how to find it later, and what the type of the thing will be, so it knows how much space to set aside</body>
+        <body>Variables can be changed. When we put a value in the variable, we initialize the variable (before you can put the variable in a string, you must initialize it). It can be changed to a different value later using an assignment operator (=). </body>
             
-            <body>Rules of naming variables:</body>
-            <ul>
-                <li>Only use letter/numbers + special characters ( _ ) and ( $ ). NO SPACE OR OTHER CHARACTERS ALLOWED.</li>
-                <li>Variables CANNOT start with and number [Ex: num1 is ok but 1num is not ok]</li>
-                <li>Cannot use name that already have a meaning in java.[ Ex: a variable cannot be named <i>string</i>]</li>
-            </ul>
-            
-            <h4>How to output in Java?</h4>
-            <body>To output in Java, use <code>System.out.print()</code> which will print on the moniter OR <code>System.out.println()</code> which will prints to the monitor and then prints a blank line. Order matters and all commands in Java end with a semicolon, and if we forget the semicolon we will also get an error when we try to compile</body>
-        </div>
+        <body>Rules of naming variables:</body>
         
-        <div class. = "part2">
-            <h3> Data types </h3>
+        <ul>
+            <li>Only use letter/numbers + special characters ( _ ) and ( $ ). NO SPACE OR OTHER CHARACTERS ALLOWED.</li>
+            <li>Variables CANNOT start with and number [Ex: num1 is ok but 1num is not ok]</li>
+            <li>Cannot use name that already have a meaning in java.[ Ex: a variable cannot be named <i>string</i>]</li>
+        </ul>
             
-            <h4> Why is it important for the computer to know what kind of input you’re giving it?</h4>
-            <body>It is Important to know what kind of input you are inputting so it knows how to deal with the data.Variables in Java are always assigned a type which tell Java:</body>
-            <ul>
-                <li> <b>What possible values can be stored</b> - this is called a domain and is important as Java needs to know how big a box in memory to allocate for the input.</li>
-                <li> <b>What operations can be performed on the data</b> - for example can two variables of this type be added together?</li>
-            </ul>
-            
-            <h4>There are two kinds of data type in Java: Primitive and Reference Data Type</h4>
-            
-            <h4> What are  Primitive Data Types?</h4>
-            <body>These data types are <i>stored directly into the memory</i> and has a fixed size. There are 8 primitive data types in Java: byte, char, short, int, long, float, double and boolean. These data types act as the basic building blocks of data manipulation in Java. The three kinds of Primitive Data Types we used most often are: </body>
-            <ul>
-                <li>int - used for storing an integer value. ints are pretty small in memory.</li>
-                <li>double - used for storing a decimal value (a number which is not an integer). doubles take up more space than ints because of the decimal component.</li>
-                <li>boolean - used for storing a true or false value, in memory this value can be represented by a single bit of memory, stored as a 1 or 0.</li>
-            </ul>
-            <body>Because boxes for primitive data type are a fixed size, it means there are limits to what they can store, even with the right type of variables. To access the largest + smallest int value which can be stored you can set int equal to <code>Integer.MAX_VALUE</code> or <code>Integer.MIN_VALUE</code>  (these are special final values which can be accessed in any java program). </body>
-            <body>In Java, You should add the word <i>final</i> into a variable declaration/initialization statement when you don’t want to keep typing a really long number. This <i>final</i> modifier locks in the value of the variable permanently so that it cannot be changed by any other parts of your code. </body>
-            
-            <h4>What are Reference Data Type?</h4> 
-            <body> Reference datas are stored as references to complex data structures. Reference data types can store several different pieces of information (e.g. a String with many different characters). Because of this, the value doesn't get stored directly in the variable like with a primitive, instead a reference to another place in memory is stored. A example would be String - they  take up lots of space in memory because they have to store each individual character separately. We use Strings for anything we won’t do calculations with, like a street address.</body>
-        </div>
+        <h4>How to output in Java?</h4>
+        <body>To output in Java, use <code>System.out.print()</code> which will print on the moniter OR <code>System.out.println()</code> which will prints to the monitor and then prints a blank line. Order matters and all commands in Java end with a semicolon, and if we forget the semicolon we will also get an error when we try to compile</body>
+    </div>
         
-        <div class = "part3">
-            <h3>Number calculations</h3>
+    <div class. = "part2">
+        <h3> Data types </h3>
             
-            <h4>How to do calculations in Java?</h4>
-            <body> To do calculations in Java using arithmetic operator which include: ‘+’ (addition), ‘-’ (subtraction), ‘*’ (multiplication), and ‘/’ (division). Java follows the order of operations.</body>
-            <body>When you divide integars, avoid dividing by 0 because dividing by 0 is mathematically impossible so while the code will compile correctly it will result in an <i>ArithmeticException</i> error when it is executed and look out for double and integers. For example, if your have two int value like 5 and 2. When you divide 5 by 2 you correct answer would be 2.5 but the program is only going to print out the value 2. To solve this issue you should set the answer to a double and then multiple it by 1.0. <br></body>
+        <h4> Why is it important for the computer to know what kind of input you’re giving it?</h4>
+        <body>It is Important to know what kind of input you are inputting so it knows how to deal with the data.Variables in Java are always assigned a type which tell Java:</body>
+        
+        <ul>
+            <li><b>What possible values can be stored</b> - this is called a domain and is important as Java needs to know how big a box in memory to allocate for the input.</li>
+            <li><b>What operations can be performed on the data</b> - for example can two variables of this type be added together?</li>
+        </ul>
             
-            <code>
+        <h4>There are two kinds of data types in Java: Primitive and Reference Data Type</h4>
+            
+        <h4> What are  Primitive Data Types?</h4>
+        <body>These data types are <i>stored directly into the memory</i> and has a fixed size. There are 8 primitive data types in Java: byte, char, short, int, long, float, double and boolean. These data types act as the basic building blocks of data manipulation in Java. The three kinds of Primitive Data Types we used most often are: </body>
+        
+        <ul>
+            <li>int - used for storing an integer value. ints are pretty small in memory.</li>
+            <li>double - used for storing a decimal value (a number which is not an integer). doubles take up more space than ints because of the decimal component.</li>
+            <li>boolean - used for storing a true or false value, in memory this value can be represented by a single bit of memory, stored as a 1 or 0.</li>
+        </ul>
+            
+        <body>Because boxes for primitive data type are a fixed size, it means there are limits to what they can store, even with the right type of variables. To access the largest + smallest int value which can be stored you can set int equal to <code>Integer.MAX_VALUE</code> or <code>Integer.MIN_VALUE</code> (these are special final values which can be accessed in any java program). </body>
+        <body>In Java, You should add the word <i>final</i> into a variable declaration/initialization statement when you don’t want to keep typing a really long number. This <i>final</i> modifier locks in the value of the variable permanently so that it cannot be changed by any other parts of your code. </body>
+            
+        <h4>What are Reference Data Type?</h4> 
+        <body> Reference data are stored as references to complex data structures. Reference data types can store several different pieces of information (e.g. a String with many different characters). Because of this, the value doesn't get stored directly in the variable like with a primitive, instead, a reference to another place in memory is stored. An example would be String - they take up lots of space in memory because they have to store each character separately. We use Strings for anything we won’t do calculations with, like a street address.</body>
+    </div>
+        
+    <div class = "part3">
+        <h3>Number calculations</h3>
+            
+        <h4>How to do calculations in Java?</h4>
+        <body> To do calculations in Java using arithmetic operators which include: ‘+’ (addition), ‘-’ (subtraction), ‘*’ (multiplication), and ‘/’ (division). Java follows the order of operations.</body>
+        <body>When you divide integers, avoid dividing by 0 because dividing by 0 is mathematically impossible so while the code will compile correctly it will result in an <i>ArithmeticException</i> error when it is executed, and look out for double and integers. For example, if you have two int values like 5 and 2. When you divide 5 by 2 your correct answer would be 2.5 but the program is only going to print out the value 2. To solve this issue you should set the answer to a double and then multiple it by 1.0. <br></body>
+            
+        <code>
             int x = 5;<br>                                                 
             int y = 2;<br>                                                 
             double z = 1.0 * x / y; <br>                      
             System.out.println(z); <br>                                            
             > 4.5 <br><br>
-            </code>
+        </code>
             
-            <body>In Java there are also Compound Assignment Operators which are used inplace of the normal ‘=’ assignment operator and change the value of a variable. We can create these operator by combining any one of the arithmetic operators with the ‘=’ sign. In code, these would look like:<br></body>
+        <body>In Java there are also Compound Assignment Operators which are used in place of the normal ‘=’ assignment operator and change the value of a variable. We can create these operators by combining any one of the arithmetic operators with the ‘=’ sign. In code, these would look like:<br></body>
             
-            <code>
+        <code>
             int x = 3; <br>
             x *= 7; // The value of x is now 21 <br>
             x -= 3; // The value of x is now 18 <br>
             x /= 6; // The value of x is now 3 <br><br>
-            </code>
+        </code>
             
-            <body>There are also two handy unary operators we can use to increment (increase by 1) or decrement (decrease by 1) the value of a variable:<br></body>
-            <code>
-                int x = 9;<br>
-                x++; // x is now 10 <br>
-                x--; // x is now 8 <br><br>
-            </code>
+        <body>There are also two handy unary operators we can use to increment (increase by 1) or decrement (decrease by 1) the value of a variable:<br></body>
             
-            <h4>Modular Divison</h4>
-            <body>In Java, there is calculation call, Modular Division which is basically is remainder division. Modular division is focus on finding the remainder. When we do modular division we say “Six mod 2 is zero”, because there is no remainder. To use modular division use, (%) operator. Modular works even if the first number is less than the second number. We will get an error if we try to divide by 0  in modular division<body>
-            <h4>Rounding Doubles</h4>
-            <body>If we want to round a positive double to the nearest integer we can add 0.5 before casting to an int. If the decimal part of the number is greater than or equal to 0.5 then the integer part will be increased by 1 before the cast. If the decimal part is below 0.5 the integer part won't be affected. If we wanted to round a negative number we would have to subtract 0.5 rather than adding it.<br> </body>
+        <code>
+            int x = 9;<br>
+            x++; // x is now 10 <br>
+            x--; // x is now 8 <br><br>
+        </code>
             
-            <table>
-                <tr>
-                    <td>Double</td>
-                    <td>+ or - 0.5</td>
-                    <td>Cast to an Int</td>
-                </tr>
-                <tr>
-                   <td>2.1</td>
-                   <td>2.6</td>
-                   <td>2</td> 
-                </tr>
-                <tr>
-                   <td>2.7</td>
-                   <td>3.2</td>
-                   <td>3</td> 
-                </tr>
-                <tr>
-                   <td>-2.1</td>
-                   <td>-2.6</td>
-                   <td>-2</td> 
-                </tr>
-                <tr>
-                   <td>-2.5</td>
-                   <td>-3.0</td>
-                   <td>-3</td> 
-                </tr>
-            </table>
+        <h4>Modular Divison</h4>
+        <body>In Java, there is a calculation called, Modular Division which is remainder division. The modular division is focused on finding the remainder. When we do modular division we say “Six mod 2 is zero”, because there is no remainder. To use modular division use, the (%) operator. Modular works even if the first number is less than the second number. We will get an error if we try to divide by 0  in modular division. <body>
                 
-            <h4>Casting</h4>
-            <body>Casting is the process of converting on data type to another. For example, if we want to change an integer to a double we can just cast the variable to a double: <code>double z = (double) x / y;</code> There are two kinds of conversion: Widening and Narrowing Conversion</body>
-            <body>Widening conversions move a data type into a bigger box. For example, your would use wisening conversion when putting an int into a bigger double box. Narrowing conversions move a data type into a smaller box. If we don’t explicitly cast when moving from a larger data type to a smaller one, we’ll get an error telling us there's a “Possible Lossy Conversion” when we try to compile (The phrase "lossy conversion" means we're trying to convert data in a way that loses some of the information) </body>
+        <h4>Rounding Doubles</h4>
+        <body>If we want to round a positive double to the nearest integer we can add 0.5 before casting to an int. If the decimal part of the number is greater than or equal to 0.5 then the integer part will be increased by 1 before the cast. If the decimal part is below 0.5 the integer part won't be affected. If we wanted to round a negative number we would have to subtract 0.5 rather than add it.<br> </body>
             
-        </div>
+        <table>
+            <tr>
+                <td>Double</td>
+                <td>+ or - 0.5</td>
+                <td>Cast to an Int</td>
+            </tr>
+            
+            <tr>
+                <td>2.1</td>
+                <td>2.6</td>
+                <td>2</td> 
+            </tr>
+            
+            <tr>
+                <td>2.7</td>
+                <td>3.2</td>
+                <td>3</td> 
+            </tr>
+            
+            <tr>
+                <td>-2.1</td>
+                <td>-2.6</td>
+                <td>-2</td> 
+            </tr>
+            
+            <tr>
+                <td>-2.5</td>
+                <td>-3.0</td>
+                <td>-3</td> 
+            </tr>
+        </table>
+                
+        <h4>Casting</h4>
+        <body>Casting is the process of converting one data type to another. For example, if we want to change an integer to a double we can just cast the variable to a double: <code>double z = (double) x / y;</code> There are two kinds of conversion: Widening and Narrowing Conversion</body>
+        <body>Widening conversions move a data type into a bigger box. For example, you would use wisening conversion when putting an int into a bigger double box. Narrowing conversions move a data type into a smaller box. If we don’t explicitly cast when moving from a larger data type to a smaller one, we’ll get an error telling us there's a “Possible Lossy Conversion” when we try to compile (The phrase "lossy conversion" means we're trying to convert data in a way that loses some of the information).</body>
+     
+    </div>
         
 {% endblock %}
 

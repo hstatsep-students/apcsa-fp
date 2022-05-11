@@ -2,30 +2,33 @@
     <head>
         <link rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    </style>   
+    
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+        
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style> 
+        
     </head>
 
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>Unit 3: Boolean Expressions and If Statements </h1>
+    <h1>Unit 3: Boolean Expressions and If Statements </h1>
         
-        <div class = "part1">
-            <h3> IF statements + if... ELSE statements</h3>
+    <div class = "part1">
+        <h3> IF statements + if... ELSE statements</h3>
             
-            <h4>How do if statements work?</h4>
-            <body>We use if statements when we want to execute code ONLY if some condition is met. If statements have two part: the condition and the body (the code that get executed if the condition is met): <code>if (condition){ //code }</code> We can also use if statemnets to  check whether one value is equal to another in conditions using (==) when these values are number. Some other ways we use it to compare primitive and reference values is using Relational Operators. These include:<br>
+        <h4>How do if statements work?</h4>
+        <body>We use if statements when we want to execute code ONLY if some condition is met. If statements have two part: the condition and the body (the code that get executed if the condition is met): <code>if (condition){ //code }</code> We can also use if statemnets to  check whether one value is equal to another in conditions using (==) when these values are number. Some other ways we use it to compare primitive and reference values is using Relational Operators. These include:<br>
+        
             <ul>
                 <li>Equal:  == </li>
                 <li>Less than: < </li>
@@ -33,32 +36,36 @@
                 <li>Greater than: > </li>
                 <li>Greater than OR equal to: >= </li>
                 <li>Not equal to: != </li>
-            </ul></body>
+            </ul>
+        </body>
             
-            <h4>What about if...ELSE statements?</h4>
-            <body>
-                Else statements are executed when the condition in the if statement is false. It ALWAYS follow an if statement. We can also combine else statements and if statements into ‘else if’ statements to create longer blocks which has more than two options.
-            </body>
-        </div>
+        <h4>What about if...ELSE statements?</h4>
+        <body>
+            Else statements are executed when the condition in the if statement is false. It ALWAYS follows an if statement. We can also combine else statements and if statements into ‘else if’ statements to create longer blocks which has more than two options.
+        </body>
+    </div>
         
-        <div class = "part2">
-            <h3>Booleans and Truth Tables</h3>
+    <div class = "part2">
+        <h3>Booleans and Truth Tables</h3>
             
-            <h4>Can Booleans statements have more than one condition?</h4>
-            <body> Yes by using nested conditionals. We can make much more complicated branching logical processes  by multiple if and else statements inside other like a flowchart with multiple splits</body>
+        <h4>Can Booleans statements have more than one condition?</h4>
+        <body> Yes by using nested conditionals. We can make much more complicated branching logical processes  by multiple if and else statements inside others like a flowchart with multiple splits</body>
             
-            <h4>What are boolean operators?</h4>
-            <body> It is another way to represent multiple conditions and it allows us to combine boolean variables into more complex statement which can still evaluate to only true or false.These include: 
+        <h4>What are boolean operators?</h4>
+        <body> It is another way to represent multiple conditions and it allows us to combine boolean variables into more complex statement which can still evaluate to only true or false.These include: 
+        
             <ul>
                 <li>NOT ! Takes the opposite</li>
                 <li>AND  &&  Both are true</li>
                 <li> OR   ||  One or both is true</li><br>
             </ul>
-            Booleans operators have an order in which they should be evaluated. The order !, &&, and lastly ||.
-            </body>
             
-            <h4>What are Truth Tables?</h4>
-            <body> It is a way of looking at all possible values of the variables and determining the value of the whole statement. Truth tables are an excellent way to identify boolean identities which means finding pairs of statements which are equivalent. An exmaple, would be 2 conditions, A and B. A could be something like ‘x == 45’ or ‘x < 22’
+            Booleans operators have an order in which they should be evaluated. The order !, &&, and lastly ||.
+        </body>
+            
+        <h4>What are Truth Tables?</h4>
+        <body> It is a way of looking at all possible values of the variables and determining the value of the whole statement. Truth tables are an excellent way to identify boolean identities which means finding pairs of statements which are equivalent. An exmaple, would be 2 conditions, A and B. A could be something like ‘x == 45’ or ‘x < 22’
+            
             <table>
                 <tr>
                     <td>A</td>
@@ -71,6 +78,7 @@
                     <td>!A || !B</td>
                     <td>!(!A && !B)</td>
                 </tr>
+                
                 <tr>
                     <td>T</td>
                     <td>F</td>
@@ -82,6 +90,7 @@
                     <td>F</td>
                     <td>T</td>
                 </tr>
+                
                 <tr>
                     <td>F</td>
                     <td>T</td>
@@ -93,6 +102,7 @@
                     <td>T</td>
                     <td>F</td>
                 </tr>
+                
                 <tr>
                     <td>T</td>
                     <td>F</td>
@@ -104,6 +114,7 @@
                     <td>T</td>
                     <td>T</td>
                 </tr>
+                
                 <tr>
                     <td>F</td>
                     <td>T</td>
@@ -116,15 +127,17 @@
                     <td>F</td>
                 </tr>
             </table>
-            </body>
-        </div>
-        
-        <div class = "part3">
-            <h3>Evaluating</h3>
             
-            <h4>What is short-circuit evaluation?</h4>
-            <body>
-                Short-circuit Evaluation is shortcut for evaluating boolean statements. The are two kinds of short-circuit evaluation:
+        </body>
+    </div>
+        
+    <div class = "part3">
+        <h3>Evaluating</h3>
+            
+        <h4>What is short-circuit evaluation?</h4>
+        <body>
+            Short-circuit Evaluation is a shortcut for evaluating boolean statements. There are two kinds of short-circuit evaluation:
+            
             <ul>
                 <li>OR - if two boolean statements are connected by the || operator, and the first statement is true, we don’t need to evaluate the second statement, because the whole thing will be true, regardless of what the second statement is:<br>
                     <code>
@@ -134,6 +147,7 @@
                         }<br>
                     </code>
                 </li>
+                
                 <li>AND - if two boolean statements are connected by the && operator, and the first statement is false, we don’t need to evaluate the second statement, because the whole thing will be false, regardless of what the second statement is:<br>
                     <code>
                         if (false && doesn’t matter)<br>
@@ -143,15 +157,17 @@
                     </code>
                 </li>
             </ul>
-            Short-circuiting also prevents dividing by 0 errors in a boolean statement by setting the first condition to not equal zero. 
-            </body>
             
-            <h4>What is  De Morgan’s Law?</h4>
-            <body> De Morgan’s Law basically simplifys booleans statements. This law includes:
+            Short-circuiting also prevents dividing by 0 errors in a boolean statement by setting the first condition to not equal zero. 
+        </body>
+            
+        <h4>What is  De Morgan’s Law?</h4>
+        <body> De Morgan’s Law basically simplifys booleans statements. This law includes:
             <ul>
                 <li>
                     Inverting Boolean Statements: <code>!(A || B) </code>is equivalent to <code>!A && !B</code>
                 </li>
+                    
                 <li>
                     Opposite of Less Than and Greater Than:
                     <ul>
@@ -160,11 +176,11 @@
                     </ul>
                 </li>
             </ul>
-            </body>
-            
-            <h4>What about comparing objects?</h4>
-            <body>We cannot use (==) in objects because (==) only refers to  memory locations. Objects have built-in methods to compare like the <code>.equals()</code> method. Remember this refers to wrapper classes too</body>
-        </div>
+        </body>
+
+        <h4>What about comparing objects?</h4>
+        <body>We cannot use (==) in objects because (==) only refers to  memory locations. Objects have built-in methods to compare like the <code>.equals()</code> method. Remember this refers to wrapper classes too</body>
+    </div>
 {% endblock %}
 
 </html>

@@ -2,228 +2,243 @@
     <head>
         <link rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    </style>   
+        
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+        
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style>  
+        
     </head>
 
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>Unit 2: Using Objects</h1>
-        <div class = "part1">
-             <h3>Class Data type: Strings</h3>
-             
-             <h4>What are class Data Type?</h4>
-             <body>Class Data Type (a.k.a. Reference Data Type) can hold many pieces of data at one time, and even many different types of data if you need them to. Programmers can define their own class data types, and we’ll learn that later in the course. When we declare a class data type, Java allocates a space in memory called a reference. It only holds the memory location of the actual data and It does this because the data could be large.Class data types have methods that allow us to change or print out the data stored in them.</body>
+    <h1>Unit 2: Using Objects</h1>
+    <div class = "part1">
+        <h3>Class Data type: Strings</h3>
+        
+        <h4>What are class Data Type?</h4>
+        <body>Class Data Type (a.k.a. Reference Data Type) can hold many pieces of data at one time, and even many different types of data if you need them to. Programmers can define their class data types, and we’ll learn that later in the course. When we declare a class data type, Java allocates a space in memory called a reference. It only holds the memory location of the actual data and It does this because the data could be large. Class data types have methods that allow us to change or print out the data stored in them.</body>
             
-             <h4>What are Strings?</h4>
-             <body>Strings are sequences of characters and are immutable. This means that once we set up a String in memory we can't actually change it - all we can do is make the variable point at a different location in memory.When strings are stored in memory, they’re stored as a series of chars which is a primitive data type, representing one character. The chars in a String have indexes, starting from 0, so we can access them individually:<br></body>
-                 <table>
-                <tr>
-                    <td>I</td>
-                    <td>n</td>
-                    <td>d</td>
-                    <td>e</td>
-                    <td>x</td>
-                </tr>
-                <tr>
-                   <td>0</td>
-                   <td>1</td>
-                   <td>2</td> 
-                   <td>3</td>
-                   <td>4</td>
-                </tr>
-                </table>
-             <body>Since the index of the first character is 0,  the index of the last character is length of the string-1 and trying to access any characters outside of this range will cause an <i>index out of bounds</i> exception.
-             </body>
-             
-             <h4>What methods do strings have?</h4>
-             <body>Below are important String Methods. Let  <code>String a = "index";</code> </body>
-             <ul>
-               <li><code>.length()</code></li>
-                <ul>
-                    <li>Returns an int, the number of chars in the string</li>
-                    <li>EX: a.length() = 5, even though the last index is 4 </li>
-                </ul>
+        <h4>What are Strings?</h4>
+        <body>Strings are sequences of characters and are immutable. This means that once we set up a String in memory we can't actually change it - all we can do is make the variable point at a different location in memory.When strings are stored in memory, they’re stored as a series of chars which is a primitive data type, representing one character. The chars in a String have indexes, starting from 0, so we can access them individually:<br></body>
+        
+        <table>
+            <tr>
+                <td>I</td>
+                <td>n</td>
+                <td>d</td>
+                <td>e</td>
+                <td>x</td>
+            </tr>
+        
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td> 
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+            
+        <body>Since the index of the first character is 0,  the index of the last character is length of the string-1 and trying to access any characters outside of this range will cause an <i>index out of bounds</i> exception.</body>
+        
+        <h4>What methods do strings have?</h4>
+        <body>Below are important String Methods. Let  <code>String a = "index";</code> </body>
+        
+        <ul>
+            <li><code>.length()</code></li>
+            
+            <ul>
+            <li>Returns an int, the number of chars in the string</li>
+                <li>EX: a.length() = 5, even though the last index is 4 </li>
+            </ul>
                 
-                <li><code>.equals(String otherString)</code></li>
-                <ul>
-                    <li>Tests if data stored in otherString is the same as this one</li>
-                    <li>Returns true or false</li>
-                </ul>
+            <li><code>.equals(String otherString)</code></li>
+            <ul>
+                <li>Tests if data stored in otherString is the same as this one</li>
+                <li>Returns true or false</li>
+            </ul>
                 
-                <li><code>.indexOf(String str)</code></li>
-                <ul>
-                    <li>Returns the index of the first occurrence of str in the calling String</li>
+            <li><code>.indexOf(String str)</code></li>
+            <ul>
+                <li>Returns the index of the first occurrence of str in the calling String</li>
                     <li>EX: a.indexOf("d") = 2</li>
-                    <li>Note that indexOf returns -1 if the string isn't found</li>
-                </ul>
+                <li>Note that indexOf returns -1 if the string isn't found</li>
+            </ul>
                 
-                <li><code>.substring(int firstOneYouWant, int firstOneYouDontWant)</code></li>
-                <ul>
-                    <li>Returns the substring from the first int up to but not including the second</li>
+            <li><code>.substring(int firstOneYouWant, int firstOneYouDontWant)</code></li>
+            <ul>
+                <li>Returns the substring from the first int up to but not including the second</li>
                     <li>EX: a.substring(1,4) = "nde"</li>
-                    <li>Be super careful about the indices, trying to access a letter outside of the range 0 to length -1 will result in an index out of bounds error!</li>
-                    <li>to create a single character substring at position index, we can use .substring(index, index+1)</li>
-                </ul>
+                <li>Be super careful about the indices, trying to access a letter outside of the range 0 to length -1 will result in an index out of bounds error!</li>
+                <li>to create a single character substring at position index, we can use .substring(index, index+1)</li>
+            </ul>
                 
-                <li><code>.substring(int firstOneYouWant)</code></li>
-                <ul>
-                    <li>Returns the substring from the specified index to the end</li>
+            <li><code>.substring(int firstOneYouWant)</code></li>
+            <ul>
+                <li>Returns the substring from the specified index to the end</li>
                     <li>EX:a.substring(2) = "dex"</li>
-                </ul>
+            </ul>
                 
-                <li><code>.toUpperCase()</code></li>
-                <ul>
-                    <li>Transforms the string to uppercase</li>
+            <li><code>.toUpperCase()</code></li>
+            <ul>
+                <li>Transforms the string to uppercase</li>
                     <li>EX: a.toUpperCase() = "INDEX"</li>
-                    <li>Not tested on the AP exam</li>
-                </ul>
+                <li>Not tested on the AP exam</li>
+            </ul>
                 
-                <li><code>.toLowerCase()</code></li>
-                <ul>
-                    <li>Transforms the string to lower case</li>
+            <li><code>.toLowerCase()</code></li>
+            <ul>
+                <li>Transforms the string to lower case</li>
                     <li>EX: a.toLowerCase() = "index"</li>
-                    <li>Not tested on the AP exam</li>
-                </ul>
+                <li>Not tested on the AP exam</li>
+            </ul>
                 
-                <li><code>.compareTo(String otherString)</code></li>
-                <ul>
-                    <li>Returns 0 if the strings are the same</li>
-                    <li>Returns a negative value if this string comes before otherString alphabetically</li>
-                    <li>Returns a positive value if this string comes after otherString alphabetically</li>
-                </ul>
-             </ul>
+            <li><code>.compareTo(String otherString)</code></li>
+            <ul>
+                <li>Returns 0 if the strings are the same</li>
+                <li>Returns a negative value if this string comes before otherString alphabetically</li>
+                <li>Returns a positive value if this string comes after otherString alphabetically</li>
+            </ul>
+        </ul>
              
-            <h4>String Concatenation</h4> 
-            <body>String Concatenation basically glue two Strings together. It takes two different strings and print they out using the (+) operator. An example would be:<br>
-                <code>
+        <h4>String Concatenation</h4> 
+        <body>String Concatenation basically glue two Strings together. It takes two different strings and print they out using the (+) operator. An example would be:<br>
+        
+            <code>
                 System.out.println("Hello" + "World");<br>
                 > HelloWorld<br><br>
-                </code>
-                When concatenting, it is important to be aware of is that if Java is already dealing with Strings then it will take any primitive value because this might happen: <br><code>
-                    int x = 1;<br>
-                    int y = 3;<br>
-                    System.out.println("The sum is: " + x + y);<br>
-                    > The sum is: 13<br><br>
-                </code>
-                Once Java works with Strings, it continues to look at things as Strings, and interprets ‘+’ as a concatenation operation. However this issue can be solved by using the order of operations:<br><code>
-                    System.out.println("The sum is: " + (x + y));<br>
-                    > The sum is: 4 <br><br>
-                </code>
-                The parentheses tell Java that it should add the x and y first.
-            </body>
+            </code>
+            When concatenting, it is important to be aware of is that if Java is already dealing with Strings then it will take any primitive value because this might happen: <br>
             
-            <h4>Escape Characters</h4>
-            <body>Because Strings uses quotation marks <i>escape sequence</i> to indicate to Java when we want to print out a quotation mark.</body>
-            <ul>
-                <li>To include a literal quote in a String: \"</li>
-                <li>To include a new line in a String: \n</li>
-                <li>To include a tab in a String: \t</li>
-                <li>To include a literal single quote in a String: \'</li>
-                <li>To include a literal backslash in a String: \\</li>
-            </ul>
-        </div>
-        <div class = "part2">
-            <h3> Classes, Objects, Constructors, and Methods</h3>
+            <code>
+                int x = 1;<br>
+                int y = 3;<br>
+                System.out.println("The sum is: " + x + y);<br>
+                > The sum is: 13<br><br>
+            </code>
             
-            <h4>What is a class?</h4>
-            <body>Classes are template for an object. Specifically the datatype of the object. Class has the instructions to make the actual object. It determines what states will be possible for an object like: 
+            Once Java works with Strings, it continues to look at things as Strings, and interprets ‘+’ as a concatenation operation. However this issue can be solved by using the order of operations:<br>
+            
+            <code>
+                System.out.println("The sum is: " + (x + y));<br>
+                > The sum is: 4 <br><br>
+            </code>
+            
+            The parentheses tell Java that it should add the x and y first.
+        </body>
+            
+        <h4>Escape Characters</h4>
+        <body>Because Strings uses quotation marks <i>escape sequence</i> to indicate to Java when we want to print out a quotation mark.</body>
+            
+        <ul>
+            <li>To include a literal quote in a String: \"</li>
+            <li>To include a new line in a String: \n</li>
+            <li>To include a tab in a String: \t</li>
+            <li>To include a literal single quote in a String: \'</li>
+            <li>To include a literal backslash in a String: \\</li>
+        </ul>
+        
+    </div>
+    <div class = "part2">
+        <h3> Classes, Objects, Constructors, and Methods</h3>
+            
+        <h4>What is a class?</h4>
+        <body>Classes are template for an object. Specifically the datatype of the object. Class has the instructions to make the actual object. It determines what states will be possible for an object like: 
+        
             <ul>
                 <li>What types of data it will store?</li>
                 <li>How many?</li>
                 <li>What restrictions there will  be on the values?</li>
             </ul>
-            </body>
             
-            <h4>What are Objects?</h4>
-            <body>An object in java is something we can use in code that has both <i>state</i> which is the actual value of data that are stored in the memory at the location of this object and <i>behaviors</i> which is action which objects can perform.All objects are store using reference memory and are Specific Instance of the <b>class</b>. When declaring Objects we need the keyword <i>new</i> to T tells Java that we need to reserve some space in memory for the new object we are creating. THE STRING DATA TYPE IS THE <b>ONLY</b> EXCEPTION.</body>
+        </body>
             
-            <h4>What are constructors?</h4>
-            <body>A constructor  is a special method specified in the class that sets up the object as we want (it is always the same name as the class name) and one class can have multiple constructors. Other than the first constrcutors the rest allows us to pass in info in the form of parameters. The values we pass in as parameters are referred to as actual parameters as opposed to formal parameters defined in the method signature. This means our constructor gets a copy of that value not the actual value itself, or a copy of the reference to that value if it is reference data Java uses something called a <i>signature</i> whenever a constructor or method appears in source code to identify what it actually has to call. The signature is made up of the name and the parameter list. Java can still tell which constructor it needs to use though as they all have different numbers of parameters and have the same name. The order of parameters matters.</body>
+        <h4>What are Objects?</h4>
+        <body>An object in java is something we can use in code that has both <i>state</i> which is the actual value of data that are stored in the memory at the location of this object and <i>behaviors</i> which is action which objects can perform.All objects are store using reference memory and are Specific Instance of the <b>class</b>. When declaring Objects we need the keyword <i>new</i> to T tells Java that we need to reserve some space in memory for the new object we are creating. THE STRING DATA TYPE IS THE <b>ONLY</b> EXCEPTION.</body>
             
-            <h4>What are methods?</h4>
-            <body>Methods dtetermines the behavior of a class. When we call a method, we are actually running code stored elsewhere - in the class for the object we created. There are two types of methods we can call: <i>void</i> and <i>non-void</i> methods. Void methods performs a function BUT don’t give us any info back while non-void methods RETURN a value which we capture using a variable or use in an expression like a print statement. Like constructors, we need to match the signature of a method we are calling by getting the name of the method, as well as the number, order and types of parameters right. Methods can also be overloaded and have the SAME name but DIFFERENT parameters.</body>
-        </div>
+        <h4>What are constructors?</h4>
+        <body>A constructor is a special method specified in the class that sets up the object as we want (it is always the same name as the class name) and one class can have multiple constructors. Other than the first constructors the rest allows us to pass in info in the form of parameters. The values we pass in as parameters are referred to as actual parameters as opposed to formal parameters defined in the method signature. This means our constructor gets a copy of that value, not the actual value itself, or a copy of the reference to that value if it is reference data Java uses something called a <i>signature</i> whenever a constructor or method appears in source code to identify what it has to call. The signature is made up of the name and the parameter list. Java can still tell which constructor it needs to use though as they all have different numbers of parameters and have the same name. The order of parameters matters.</body>
+            
+        <h4>What are methods?</h4>
+        <body>Methods determine the behavior of a class. When we call a method, we are running code stored elsewhere - in the class for the object we created. There are two types of methods we can call: <i>void</i> and <i>non-void</i> methods. Void methods perform a function BUT don’t give us any info back while non-void methods RETURN a value which we capture using a variable or use in an expression like a print statement. Like constructors, we need to match the signature of a method we are calling by getting the name of the method, as well as the number, order, and types of parameters right. Methods can also be overloaded and have the SAME name but DIFFERENT parameters.</body>
+    </div>
         
-        <div class = "part3">
-            <h3>2 specific kind of class: Wrapper and Math Class</h3>
+    <div class = "part3">
+        <h3>2 specific kind of class: Wrapper and Math Class</h3>
             
-            <h4>How do wrapper class work?</h4>
-            <body>Wrapper classes are ways of storing primitive data types in a class. There is one built in for each primitive data type--class Integer for ints, class Double for doubles, etc. Because Integers and Doubles are objects, we can use different methods like the <code>.compareTo()</code> method which are used to compare their values or the <code>.equal()</code> method.</body>
+        <h4>How do wrapper class work?</h4>
+        <body>Wrapper classes are ways of storing primitive data types in a class. There is one built in for each primitive data type--class Integer for ints, class Double for doubles, etc. Because Integers and Doubles are objects, we can use different methods like the <code>.compareTo()</code> method which are used to compare their values or the <code>.equal()</code> method.</body>
             
-            <h4>What is Autoboxing and Unboxing>?</h4>
-            <body>The con of wrapper class was the need to convert between the primitive data type and the wrapper class but now newer Java are able to Autobox which converts a primitive to object or Unbox which converst objects back to primitive </body>
+        <h4>What is Autoboxing and Unboxing>?</h4>
+        <body>The con of wrapper class was the need to convert between the primitive data type and the wrapper class but now newer Java can Autobox which converts a primitive to an object or Unbox which converts objects back to primitive </body>
             
-            <h4>What is the Math Class?</h4>
-            <body>The math class is extremely useful to us when performing calculations in Java. What's special about these methods is that they are all <i>static</i> methods. We don’t have to declare a new Math object to use them (like <code>Math m = new Math()</code>, with <code> m.random()</code>). You can get to these methods by just using the class name (Math), and the dot operator. Below is an list of math class methods <br></body>
+        <h4>What is the Math Class?</h4>
+        <body>The math class is extremely useful to us when performing calculations in Java. What's special about these methods is that they are all <i>static</i> methods. We don’t have to declare a new Math object to use them (like <code>Math m = new Math()</code>, with <code> m.random()</code>). You can get to these methods by just using the class name (Math), and the dot operator. Below is an list of math class methods <br></body>
+            
+        <ul>
+            <li>Math.abs --  an overloaded method:</li>
             <ul>
-                <li>Math.abs --  an overloaded method:</li>
-                <ul>
-                    <li>takes one double as a parameter and returns the absolute value as a double.</li>
-                    <li><code>
+                <li>takes one double as a parameter and returns the absolute value as a double.</li>
+                <li><code>
                     double x = 9.6;<br>
                     double dist = Math.abs(x); <br> 
                     System.out.println(dist);   <br>                              
                     > 9.6 <br>
-                    </code>
-                    </li>
-                </ul>
-                
-                <li>Math.pow:</li>
-                <ul>
-                 <li>takes two double as inputs and returns the first raised to the second as a double</li>
-                 <li> <code>
-                   int a = 2 <br>
-                   int b = 6   <br>                                             
-                   double answer1 = Math.pow(a, b);   <br>    
-                   System.out.println(answer1);    <br>                                          
-                   > 64.0  <br>
-                   </code>
-                 </li>
-                </ul>
-                
-                <li>Math.sqrt</li>
-                <ul>
-                    <li>Takes a double as input and returns its square root as double</li>
-                    <li> <code>
-                      double answer2 = Math.sqrt(answer1); <br>
-                      System.out.println(answer2);   <br>     
-                      > 8.0  <br>
-                    </code> </li>
-                </ul>
-                
-                <li>Math.random</li>
-                <ul>
-                     <li>does not take any input, and returns a random double between 0 and 1</li>
-                     <li><code>
-                        double answer3 = Math.random(); <br>
-                        System.out.println(answer3);   <br>     
-                        > 0.23487... <br>
-                     </code></li>
-                      <li> Random numbers can be very useful in all sorts of applications, but often we want a random integer in a given range, not a random decimal between 0 and 1. We can transform it like this, where we know the range of numbers and the minimum number<br>:
-                        <code>
-                            double ran = Math.random();  <br>
-                            int range = 100;             <br>
-                            int min = 1;            <br>
-                            double answer = (int) (ran * range) + min; // follow order of operations<br>   
-                            System.out.println(answer); <br>               
-                            > 24<br> <br>
-                        </code>
-                        
-                </ul>
+                </code></li>
             </ul>
-        </div>
-        
+                
+            <li>Math.pow:</li>
+            <ul>
+                <li>takes two double as inputs and returns the first raised to the second as a double</li>
+                <li><code>
+                    int a = 2 <br>
+                    int b = 6   <br>                                             
+                    double answer1 = Math.pow(a, b);   <br>    
+                    System.out.println(answer1);    <br>                                          
+                    > 64.0  <br>
+                </code></li>
+            </ul>
+                
+            <li>Math.sqrt</li>
+            <ul>
+                <li>Takes a double as input and returns its square root as double</li>
+                <li><code>
+                    double answer2 = Math.sqrt(answer1); <br>
+                    System.out.println(answer2);   <br>     
+                    > 8.0  <br>
+                </code></li>
+            </ul>
+                
+            <li>Math.random</li>
+            <ul>
+                <li>does not take any input, and returns a random double between 0 and 1</li>
+                <li><code>
+                    double answer3 = Math.random(); <br>
+                    System.out.println(answer3);   <br>     
+                    > 0.23487... <br>
+                </code></li>
+                <li> Random numbers can be very useful in all sorts of applications, but often we want a random integer in a given range, not a random decimal between 0 and 1. We can transform it like this, where we know the range of numbers and the minimum number<br>:
+                    <code>
+                        double ran = Math.random();  <br>
+                        int range = 100;             <br>
+                        int min = 1;            <br>
+                        double answer = (int) (ran * range) + min; // follow order of operations<br>   
+                        System.out.println(answer); <br>               
+                        > 24<br> <br>
+                    </code></li>
+            </ul>
+        </ul>
+    </div>
+ 
 {% endblock %}
 </html>
