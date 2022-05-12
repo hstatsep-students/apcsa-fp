@@ -2,109 +2,120 @@
     <head>
         <link rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    </style>   
+        
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+        
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style>   
+        
     </head>
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>Unit 7: ArrayList</h1>
-        <div class = "part1">
-            <h4>What are Arraylists?</h4>
-            <body>An ArrayList is a collection or list that <i>only</i>stores class data types, or objects. It is similar to a regular array, but it’s really only storing references to the data it contains. The size of arraylist is not fixed which means that adding or removing elements in an arrayList will not lose data. To  declare ArrayList use <code>ArrayList<DataType> list = new ArrayList<DataType>();</code>. Like arrays, arraylists has index and starts at 0 too. Standards numbers which are stored in primitive cannot be added to an ArrayList but we do have wrapper classes and we can use unboxing and autoboxing to address this issue. Built-in methods that arraylist provided:
+    <h1>Unit 7: ArrayList</h1>
+    <div class = "part1">
+        <h4>What are Arraylists?</h4>
+        <body>An ArrayList is a collection or list that <i>only</i>stores class data types, or objects. It is similar to a regular array, but it’s really only storing references to the data it contains. The size of arraylist is not fixed which means that adding or removing elements in an arrayList will not lose data. To  declare ArrayList use <code>ArrayList <DataType> list = new ArrayList <DataType> ();</code>. Like arrays, arraylists has index and starts at 0 too. Standards numbers which are stored in primitive cannot be added to an ArrayList but we do have wrapper classes and we can use unboxing and autoboxing to address this issue. Built-in methods that arraylist provided:
+        
             <table>
                 <tr>
                     <td><code>list.add(e);</code></td>
                     <td>Adds e to end of list</td>
                 </tr>
+                
                 <tr>
                    <td><code>list.add(i, e);</code></td> 
                    <td>Adds element e at location i</td>
                 </tr>
+                
                 <tr>
                     <td><code>list.set(i, e);</code></td>
                     <td>Resets element at i with object e</td>
                 </tr>
+                
                 <tr>
                     <td><code>list.get(i);</code></td>
                     <td>Returns the element at i</td>
                 </tr>
+                
                 <tr>
                     <td><code>list.remove(i);</code></td>
                     <td>Removes element at i</td>
                 </tr>
+                
                 <tr>
                     <td><code>list.size();</code></td>
                     <td>Returns number of elements in list</td>
                 </tr>
-            </table></body>
+                
+            </table>
+        </body>
             
-            <h4>How to traverse through arrayList?</h4>
-            <body>Because arraylists can change size, it would be best  for the loop to start from the last element of the arrayList to the front. When traversing multiple lists, be careful to make sure that the ArrayList are the <b>same size </b>or you might end up with an <i>indexOutOfBound</i> exception.</body>
-        </div>
-        <div class = "part2">
-            <h3>Algorithms</h3>
-            <h4>What are algorthims that can be used for arraylist?</h4>
-            <body>Anything we can do with an Array we can also do with an ArrayList. In fact, some operations are much easier with ArrayLists because they can change size. Algorithms that focus on the elements itself, use for-each loops while algorithms that focus on the index, use for loop</body>
+        <h4>How to traverse through arrayList?</h4>
+        <body>Because arraylists can change size, it would be best  for the loop to start from the last element of the arrayList to the front. When traversing multiple lists, be careful to make sure that the ArrayList are the <b>same size</b> or you might end up with an <i>indexOutOfBound</i> exception.</body>
+    </div>
+        
+    <div class = "part2">
+        <h3>Algorithms</h3>
+        <h4>What are algorthims that can be used for arraylist?</h4>
+        <body>Anything we can do with an Array we can also do with an ArrayList. In fact, some operations are much easier with ArrayLists because they can change size. Algorithms that focus on the elements itself, use for-each loops while algorithms that focus on the index, use for loop</body>
             
-            <h3>3 specific types of algorthims</h3>
-            <h4>Linear Search (review)</h4>
-            <body>An linear search  can apply to any set of values  and works like this:
+        <h3>3 specific types of algorthims</h3>
+        <h4>Linear Search (review)</h4>
+        <body>An linear search  can apply to any set of values  and works like this:
             <ul>
                 <li>Start at the beginning of a set of data</li>
                 <li>Is this the value we’re looking for?
-                <ul>
-                    <li>If yes, we stop searching</li>
-                    <li>If no, we move on to the next item</li>
-                </ul>
+                    <ul>
+                        <li>If yes, we stop searching</li>
+                        <li>If no, we move on to the next item</li>
+                    </ul>
                 </li>
                 <li>Repeat step 2 until we find what we’re looking for, or until we reach the end of the set</li>
             </ul>
             When doing linear search, never make assumption about the length of the data set especially for arraylists since it can change size so it would be wise to use <code>list.size();</code>. Linear search is best for short datasets.
-            </body>
-             <h4>What is selection sort?</h4>
-             <body>Selection sort put the elements of an array or list in a certain order. It perform like this:
-             <ol>
-                 <li>Find the smallest value in the array.</li>
-                 <li>Swap it with the current position (starting at first element).</li>
-                 <li>Move the current position over one.</li>
-                 <li>Continue these steps until you reach the end of the array.</li>
-             </ol>
-             Often, your would need to use 2 loops to make selection sort. A selection sort look like:<br>
+        </body>
+        
+        <h4>What is selection sort?</h4>
+        <body>Selection sort put the elements of an array or list in a certain order. It perform like this:
+            <ol>
+                <li>Find the smallest value in the array.</li>
+                <li>Swap it with the current position (starting at first element).</li>
+                <li>Move the current position over one.</li>
+                <li>Continue these steps until you reach the end of the array.</li>
+            </ol>
+            Often, your would need to use 2 loops to make a selection sort. A selection sort looks like this:<br>
              
-             <code>
-                for (from i=0 to length-1)...         //sets current position<br>
-                {<br>
-                  for (from current position(i) to length-1)...  //only looks at indexes past the current position<br>
-                     {<br>
+            <code>
+                for (from i=0 to length-1)... {        //sets current position<br>
+                    for (from current position(i) to length-1)... { //only looks at indexes past the current position<br>
                         swap smallest with i<br>
-                     }<br>
+                    }<br>
                 }<br>
-             </code>
-             It takes to long time if selection sort is used on large datasets
-             </body>
+            </code>
+            It takes a too long time if selection sort is used on large datasets
+        </body>
              
-             <h4>What is insertion sort?</h4>
-             <body>Like selection sort, insertion sort put the dataset in order however it differs because it compares the current element to each one that comes before it until it finds an element less than the current one. The steps of insertion sort:
-             <ol>
-                 <li>Start with a pointer variable next = 1</li>
-                 <li>Going backwards, inspect each element until you find one that is less than the value at position next.</li>
-                 <li>Insert array[next] at this position</li>
-                 <li>Increment next</li>
-                 <li>Repeat this process until you reach the end of the array</li>
-             </ol>
-             Like selection sort, insertion sort will take a long time to sort through large datasets.
-             </body>
-        </div>
+        <h4>What is insertion sort?</h4>
+        <body>Like selection sort, insertion sort put the dataset in order however it differs because it compares the current element to each one that comes before it until it finds an element less than the current one. The steps of insertion sort:
+            <ol>
+                <li>Start with a pointer variable next = 1</li>
+                <li>Going backwards, inspect each element until you find one that is less than the value at position next.</li>
+                <li>Insert array[next] at this position</li>
+                <li>Increment next</li>
+                <li>Repeat this process until you reach the end of the array</li>
+            </ol>
+            Like selection sort, insertion sort will take a long time to sort through large datasets.
+        </body>
+        
+    </div>
 {% endblock %}
 </html>

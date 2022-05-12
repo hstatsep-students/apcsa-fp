@@ -2,47 +2,50 @@
     <head>
         <link rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    </style>   
+        
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+        
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style>
+        
     </head>
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>Unit 10: Recursion</h1>
+    <h1>Unit 10: Recursion</h1>
+    <h3>All about Recursion</h3>
+    <h4>What is recursion?</h4>
+    <body>What make methods classify as recursion methods is that it <b>CALLS ITSELF</b>. Recursion risks never stop so a base needs to exist. In other words, an input for which there will be no recursive call, and that each recursive call moves you closer to the base case. When the recursive call comes before the print statement, the output will be LIFO, which stands for last-in-first-out. When the print statement is after the recursive call like this, it’s like walking downstairs and leaving a piece of information on each step. When we reach the bottom (the base case), we turn around and walk back up the stairs, meaning that we’ll read off the information on the lowest step first (which was the last piece of information added). Anything done by recursion can also be done by iteration and vice versa. However, choosing to do iterations or recursion is not always clear</body>
         
-        <h3>All about Recursion</h3>
-        <h4>What is recursion?</h4>
-        <body>What make methods classify as recursion methods is that it <b>CALLS ITSELF</b>. Recursion risks never stopping so it is important for a base to exist. In other words an input for which there will be no recursive call, and that each recursive call moves you closer to the base case. When the recursive call comes before the print statement, the output will be LIFO, which stands for last-in-first-out. When the print statement is after the recursive call like this, it’s like walking downstairs and leaving a piece of information on each step. When we reach the bottom (the base case), we turn around and walk back up the stairs, meaning that we’ll read off the information on the lowest step first (which was the last piece of information added). Anything done by recursion can also be done by iteration and vice versa. However, choosing to do iterations or recursion is not always clear</body>
+    <h3>Algorithms with recursion</h3>
+    <h4>What is Binary search?</h4>
+    <body>Binary search is a searching algorithm. One rule for the binary sort is that the dataset should be ORDER already. The binary should basically divide datasetin half, go to the middle and then compare; if it too high you get rid of the higher side or vice versa. Then we split again until we find our target value. <br>Pseudocode for Binary Search:<br>
         
-        <h3>Algorithms with recursion</h3>
-        <h4>What is Binary search?</h4>
-        <body>Binary search is a searching algorithm. One rule for the binary sort is that the dataset should be ORDER already. The binary should basically divide datasetin half, go to the middle and then compare; if it too high you get rid of the higher side or vice versa. Then we split again until we find our target value.<br> Pseudocode for Binary Search:<br>
         <ul>
             <li>We need to specify which part of the set we are looking for. Lower limit is set to low while higher limit is set to high</li>
-            <li>mid point is (low+high)/2 → use to compare out target and if out target is less then we set the new value of high to be mid -1 and then repeat the process. </li>
+            <li>mid point is (low+high)/2 → use to compare out target and if out target is less then we set the new value of high to be mid -1 and then repeat the process.</li>
             <li>Find the value at midpoint mid = (low + high)/2</li>
             <li>If our target value is:
-            <ul>
-                <li>Lower than this value: repeat with high = mid - 1</li>
-                <li>Higher than this value: repeat with low = mid + 1</li>
-            </ul>
-            <li>Repeat until we find our match, or high < low (which means our target does not exist in the set)</li>
+                <ul>
+                    <li>Lower than this value: repeat with high = mid - 1</li>
+                    <li>Higher than this value: repeat with low = mid + 1</li>
+                </ul>
+                <li>Repeat until we find our match, or high < low (which means our target does not exist in the set)</li>
+            </li>
         </ul>
-        Binary search  is way faster than linear search for large data sets.
-        </body>
+        Binary search is way faster than linear search for large data sets.
+    </body>
         
-        <h4>What is merge sort?</h4>
-        <body>Merge sort is really fast with large dataset but is complicated to code. It works by breaking down an array into smaller pieces until it consists of one elements and rebuild it by comparing pieces with each other; Consist of BREAKING DOWN and then REMERGING. When merging, it only takes two smaller arrays and merge then and then it moves on to the nest two arrays. When your merging the “pointer” move one spot forward in the same array. When tracing, cross out each element as it adds onto the bigger array.</body>
+    <h4>What is merge sort?</h4>
+    <body>Merge sort is fast with a large dataset but is complicated to code. It works by breaking down an array into smaller pieces until it consists of one element and rebuilding it by comparing pieces with each other, this consists of BREAKING DOWN and then REMERGING. When merging, it only takes two smaller arrays and merges them and then it moves on to the next two arrays. When your merge the “pointer” move one spot forward in the same array. When tracing, cross out each element as it adds to the bigger array.</body>
         
 {% endblock %}
 </html>

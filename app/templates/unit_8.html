@@ -2,74 +2,65 @@
     <head>
         <link rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    </style>   
+        
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+        
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style>   
     </head>
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>Unit 8: 2D Arrays</h1>
-        <div class = "part1">
-            <h3>About 2d Arrays</h3>
-            <h4>What are 2d arrays?</h4>
-            <body>2d arrays are arrays that have rows and columns. Rules that apply to normal array applies to 2D arrays:
+    <h1>Unit 8: 2D Arrays</h1>
+    <div class = "part1">
+        <h3>About 2d Arrays</h3>
+        <h4>What are 2d arrays?</h4>
+        <body>2d arrays are arrays that have rows and columns. Rules that apply to normal array applies to 2D arrays:
             <ul>
                 <li>store one type of data</li>
                 <li>indexed from 0 to length - 1</li>
                 <li>used to store large amounts of data</li>
                 <li>2d array rows can have different length</li>
             </ul>
-            </body>
+        </body>
             
-            <h4>How to set up 2d arrays?</h4>
-            <body>
-                To declare 2d arrays use: <code>datatype[][] grid  = new datatype[//num of rows][//num of column];</code>. To access the elements in 2d array, use: <code>grid[//row][//colums]</code>.
-            </body>
-            
-            <h4>How to Loop through 2d arrays?</h4>
-            <body> There are two ways to loops through 2d arrays:
+        <h4>How to set up 2d arrays?</h4>
+        <body>To declare 2d arrays use: <code>datatype[][] grid  = new datatype[//num of rows][//num of column];</code>. To access the elements in 2d array, use: <code>grid[//row][//colums]</code>.</body>
+        <h4>How to Loop through 2d arrays?</h4>
+        <body>There are two ways to loops through 2d arrays:
             <ul>
                 <li>Row-major: access rows first<br>
-                <code>
-                    for (int r = 0; r < grid.length; r++)  //accesses rows<br>
-                    {<br>
-                      for (int c = 0; c < grid[0].length; c++) //accesses columns <br>
-                      {<br>
-                        System.out.print (grid [r][c] + " \t"); //prints elements on same line<br>
-                      }<br>
-                     System.out.println( ); //skips to next line<br>
-                    }<br>
-                </code>
+                    <code>
+                        for (int r = 0; r < grid.length; r++){  //accesses rows<br>
+                            for (int c = 0; c < grid[0].length; c++){ //accesses columns <br>
+                                System.out.print (grid [r][c] + " \t"); //prints elements on same line<br>
+                            }<br>
+                            System.out.println( ); //skips to next line<br>
+                        }<br>
+                    </code>
                 </li>
+                
                 <li>column-major: access columns first<br>
-                <code>
-                    for (int c = 0; c < grid[0].length; c++)  //accesses columns<br>
-                    {<br>
-                      for (int r = 0; r < grid.length; r++) //accesses rows <br>
-                      {<br>
-                        System.out.print (grid [r][c] + " \t"); //prints elements on same line<br>
-                      }<br>
-                      System.out.println( ); //skips to next line<br>
-                    }<br>
-                </code>
+                    <code>
+                        for (int c = 0; c < grid[0].length; c++){  //accesses columns<br>
+                            for (int r = 0; r < grid.length; r++){ //accesses rows <br>
+                                System.out.print (grid [r][c] + " \t"); //prints elements on same line<br>
+                            }<br>
+                            System.out.println( ); //skips to next line<br>
+                        }<br>
+                    </code>
                 </li>
             </ul>
-            
             When doing 2D array Algorithms, think carefully about what you’re doing with rows or columns, set up your for loops accordingly, and then the rest becomes relatively straightforward.
-            </body>
-            
-            
-            
-        </div>
+        </body>
+    </div>
 {% endblock %}
 </html>
