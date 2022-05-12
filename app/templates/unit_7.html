@@ -23,7 +23,7 @@
     <h1>Unit 7: ArrayList</h1>
     <div class = "part1">
         <h4>What are Arraylists?</h4>
-        <body>An ArrayList is a collection or list that <i>only</i>stores class data types, or objects. It is similar to a regular array, but it’s really only storing references to the data it contains. The size of arraylist is not fixed which means that adding or removing elements in an arrayList will not lose data. To  declare ArrayList use <code>ArrayList <DataType> list = new ArrayList <DataType> ();</code>. Like arrays, arraylists has index and starts at 0 too. Standards numbers which are stored in primitive cannot be added to an ArrayList but we do have wrapper classes and we can use unboxing and autoboxing to address this issue. Built-in methods that arraylist provided:
+        <body>An ArrayList is a collection or list that <i>only</i> stores class data types, or objects. It is similar to a regular array, but it’s really only storing references to the data it contains. The size of arraylist is not fixed which means that adding or removing elements in an arrayList will not lose data. To declare ArrayList use <code>ArrayList <DataType> list = new ArrayList <DataType> ();</code>. Like arrays, arraylists has index and starts at 0 too. Standards numbers which are stored in primitive cannot be added to an ArrayList but we do have wrapper classes and we can use unboxing and autoboxing to address this issue. Built-in methods that arraylist provided:
         
             <table>
                 <tr>
@@ -60,7 +60,7 @@
         </body>
             
         <h4>How to traverse through arrayList?</h4>
-        <body>Because arraylists can change size, it would be best  for the loop to start from the last element of the arrayList to the front. When traversing multiple lists, be careful to make sure that the ArrayList are the <b>same size</b> or you might end up with an <i>indexOutOfBound</i> exception.</body>
+        <body>Because arraylists can change size, it would be best for the loop to start from the last element of the arrayList to the front. When traversing multiple lists, be careful to make sure that the ArrayList are the <b>same size</b> or you might end up with an <i>indexOutOfBound</i> exception.</body>
     </div>
         
     <div class = "part2">
@@ -70,7 +70,7 @@
             
         <h3>3 specific types of algorthims</h3>
         <h4>Linear Search (review)</h4>
-        <body>An linear search  can apply to any set of values  and works like this:
+        <body>An linear search can apply to any set of values and works like this:
             <ul>
                 <li>Start at the beginning of a set of data</li>
                 <li>Is this the value we’re looking for?
@@ -96,9 +96,9 @@
              
             <code>
                 for (from i=0 to length-1)... {        //sets current position<br>
-                    for (from current position(i) to length-1)... { //only looks at indexes past the current position<br>
-                        swap smallest with i<br>
-                    }<br>
+                &emsp;for (from current position(i) to length-1)... { //only looks at indexes past the current position<br>
+                &emsp;&emsp;swap smallest with i<br>
+                &emsp;}<br>
                 }<br>
             </code>
             It takes a too long time if selection sort is used on large datasets

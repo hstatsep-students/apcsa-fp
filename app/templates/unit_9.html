@@ -23,14 +23,14 @@
     <div class = "part1">
         <h3>Inheritance Basics</h3>
             
-        <h4>What is inheritance></h4>
-        <body>Inheritance allows the program to set up sub-classes and inherit the attributes and methods of a parent class. Then you can as more specific functionality specific to the children class. By using inheritance, Java lets you set up a subclass that inherits the attributes and methods of its parent class, and then adds more functionality specific to that child class. We use the keyword <i>extends</i> which locks the parent and children class together</body>
+        <h4>What is inheritance?</h4>
+        <body>Inheritance allows the program to set up sub-classes and inherit the attributes and methods of a parent class. Then you can as more specific functionality specific to the children class. By using inheritance, Java lets you set up a subclass that inherits the attributes and methods of its parent class, and then adds more functionality specific to that child class. We use the keyword <i>extends</i> which locks the parent and children class together.</body>
             
         <h4>How do we access the parent class functionality?</h4>
         <body>We can use the keyword <i>super</i> to access constructor behavior from the parent class. This keyword created an <b>Is-A</b> relationship between the subclass and superclass. The child class also has access to all accessors and mutators from the parent class. A child class will inherit all public methods from its parent class; these methods will also be public in the child class. A child can inherit from only one parent class while a parent class can have multiple children classes.</body>
             
         <h4>Implicit Super</h4>
-        <body>An important thing to note about using <i>super</i> is that it must be the first line in any method you use it. With that in mind, here’s another important feature: when dealing with constructors, <i>super</i> is implied whether you write it or not.  This only applies to constructors.<br><br>
+        <body>An important thing to note about using <i>super</i> is that it must be the first line in any method you use it. With that in mind, here’s another important feature: when dealing with constructors, <i>super</i> is implied whether you write it or not. This only applies to constructors.<br><br>
             It's worth noting that every single constructor in every class calls a constructor from its superclass (either because we told it to or Java inserted a call like the one above). This means of course that the parent constructor that just got called will also call its parent class constructor. This continues up the class hierarchy until the constructor for the object class gets called. Each constructor then executes in turn, starting with an object, and working down the chain until the original constructor called is executed.
         </body>
             
@@ -48,10 +48,10 @@
         <body>Knowing if classes have a “Is-a” or “Has-a” relationships help user know if a class belongs to another class hierarchy</body>
             
         <h4>What the difference between “Is-a” and “Has-a” relationships?</h4>
-        <body>If a class is in an “Is-a” relationship with another class, they are probably a parent-child class while if a class is in a “Has-a” relationship with another class, they are probably not in the same class hierarchy.<br> An example would be that a ford class <b>is a</b> car class so the ford class is probably an inheritance of the car class while a car class <b>has a</b> wheel class thus the wheel class should not be part of the existing hierarchy.</body>
+        <body>If a class is in an “Is-a” relationship with another class, they are probably a parent-child class while if a class is in a “Has-a” relationship with another class, they are probably not in the same class hierarchy.<br>An example would be that a ford class <b>is a</b> car class so the ford class is probably an inheritance of the car class while a car class <b>has a</b> wheel class thus the wheel class should not be part of the existing hierarchy.</body>
             
         <h4>Declaring as a Parent Class</h4>
-        <body> A parent can take on the shape of any of their child classes. It is important to take consider what happens when we compile, and what happens when we run. Java determines whether something will compile based on its declared type: so if you declare an object as parent class and try to access a method that is in child class but not parent class, this won't work. However, when we run a Java program, the method called is determined by which class was used to instantiate the variable so if the object method exists in the parent class but is overridden by the child class, then the code will use the child method even though the shape is declared as the parent class.</body>
+        <body>A parent can take on the shape of any of their child classes. It is important to take consider what happens when we compile, and what happens when we run. Java determines whether something will compile based on its declared type: so if you declare an object as parent class and try to access a method that is in child class but not parent class, this won't work. However, when we run a Java program, the method called is determined by which class was used to instantiate the variable so if the object method exists in the parent class but is overridden by the child class, then the code will use the child method even though the shape is declared as the parent class.</body>
     </div>
 {% endblock %}
 </html>

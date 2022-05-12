@@ -49,10 +49,10 @@
             </tr>
         </table>
             
-        <body>Since the index of the first character is 0,  the index of the last character is length of the string-1 and trying to access any characters outside of this range will cause an <i>index out of bounds</i> exception.</body>
+        <body>Since the index of the first character is 0, the index of the last character is length of the string-1 and trying to access any characters outside of this range will cause an <i>index out of bounds</i> exception.</body>
         
         <h4>What methods do strings have?</h4>
-        <body>Below are important String Methods. Let  <code>String a = "index";</code> </body>
+        <body>Below are important String Methods. Let <code>String a = "index";</code> </body>
         
         <ul>
             <li><code>.length()</code></li>
@@ -158,7 +158,7 @@
             <ul>
                 <li>What types of data it will store?</li>
                 <li>How many?</li>
-                <li>What restrictions there will  be on the values?</li>
+                <li>What restrictions there will be on the values?</li>
             </ul>
             
         </body>
@@ -180,13 +180,13 @@
         <body>Wrapper classes are ways of storing primitive data types in a class. There is one built in for each primitive data type--class Integer for ints, class Double for doubles, etc. Because Integers and Doubles are objects, we can use different methods like the <code>.compareTo()</code> method which are used to compare their values or the <code>.equal()</code> method.</body>
             
         <h4>What is Autoboxing and Unboxing>?</h4>
-        <body>The con of wrapper class was the need to convert between the primitive data type and the wrapper class but now newer Java can Autobox which converts a primitive to an object or Unbox which converts objects back to primitive </body>
+        <body>The con of wrapper class was the need to convert between the primitive data type and the wrapper class but now newer Java can Autobox which converts a primitive to an object or Unbox which converts objects back to primitive.</body>
             
         <h4>What is the Math Class?</h4>
-        <body>The math class is extremely useful to us when performing calculations in Java. What's special about these methods is that they are all <i>static</i> methods. We don’t have to declare a new Math object to use them (like <code>Math m = new Math()</code>, with <code> m.random()</code>). You can get to these methods by just using the class name (Math), and the dot operator. Below is an list of math class methods <br></body>
+        <body>The math class is extremely useful to us when performing calculations in Java. What's special about these methods is that they are all <i>static</i> methods. We don’t have to declare a new Math object to use them (like <code>Math m = new Math()</code>, with <code>m.random()</code>). You can get to these methods by just using the class name (Math), and the dot operator. Below is an list of math class methods:<br></body>
             
         <ul>
-            <li>Math.abs --  an overloaded method:</li>
+            <li>Math.abs -- an overloaded method:</li>
             <ul>
                 <li>takes one double as a parameter and returns the absolute value as a double.</li>
                 <li><code>
@@ -227,15 +227,16 @@
                     System.out.println(answer3);   <br>     
                     > 0.23487... <br>
                 </code></li>
-                <li> Random numbers can be very useful in all sorts of applications, but often we want a random integer in a given range, not a random decimal between 0 and 1. We can transform it like this, where we know the range of numbers and the minimum number<br>:
+                <li>Random numbers can be very useful in all sorts of applications, but often we want a random integer in a given range, not a random decimal between 0 and 1. We can transform it like this, where we know the range of numbers and the minimum number<br>:
                     <code>
                         double ran = Math.random();  <br>
                         int range = 100;             <br>
                         int min = 1;            <br>
                         double answer = (int) (ran * range) + min; // follow order of operations<br>   
                         System.out.println(answer); <br>               
-                        > 24<br> <br>
-                    </code></li>
+                        > 24<br><br>
+                    </code>
+                </li>
             </ul>
         </ul>
     </div>
