@@ -3,49 +3,51 @@
     <head>
         <link rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    .sidebar {
-        height: 100%;
-        width:20%;
-        position: fixed;
-        z-index:1;
-        top:0;
-        left: 0;
-        background-color: #108D6C;
-        overflow-x: hidden;
-        padding-top: 20px;
-        transition: 0.5s;
-    }
-    .sidebar div {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 20px;
-      color: white;
-      background-color: #108D6C;
-      display: block;
-    }
-    .sidebar a {
-      color: white; 
-    }
-    
-    .sidebar div:hover {
-      background-color:#1BAE87 ;
-    }
-    
-    .content{
-        margin-left: 20%; 
-        padding: 0px 10px;
-    }
-    
-    code{
-        color: blue;
-    }
-    h3{
-        text-decoration: underline;
-    }
-
-    </style>   
+        
+        <style>
+            .sidebar {
+                height: 100%;
+                width:20%;
+                position: fixed;
+                z-index:1;
+                top:0;
+                left: 0;
+                background-color: #108D6C;
+                overflow-x: hidden;
+                padding-top: 20px;
+                transition: 0.5s;
+            }
+            .sidebar div {
+              padding: 6px 8px 6px 16px;
+              text-decoration: none;
+              font-size: 20px;
+              color: white;
+              background-color: #108D6C;
+              display: block;
+            }
+            .sidebar a {
+              color: white; 
+            }
+            
+            .sidebar div:hover {
+              background-color:#1BAE87 ;
+            }
+            
+            .content{
+                margin-left: 20%; 
+                padding: 0px 10px;
+            }
+            
+            code{
+                color: blue;
+            }
+            h3{
+                text-decoration: underline;
+            }
+        </style>   
+        
     </head>
+    
     <body>
         <div class="sidebar">
             <div><a href = "/home">Home</a></div>
@@ -60,10 +62,10 @@
             <div><a href = "/unit9">Unit 9: Inheritance</a></div>
             <div><a href = "/unit10">Unit 10: Recursion</a></div>
         </div>
-       <div class ="content">
+        
+        <div class ="content">
            {% block content %}{% endblock %}
-       </div>
+        </div>
 
     </body>
-    
 </html>
